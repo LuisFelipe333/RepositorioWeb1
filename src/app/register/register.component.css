@@ -1,0 +1,6 @@
+.body{
+    text-align: center;
+    width: 500px;
+    left: 50%;
+    transform: translate(150%,50%);
+}

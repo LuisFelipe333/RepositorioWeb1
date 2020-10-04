@@ -1,0 +1,13 @@
+.body{
+    text-align: center ;
+}
+
+.center{
+    width: 500px;
+    transform: translate(140%,20%);
+}
+
+.texto{
+    transform: translate(0%,50%);
+}
+

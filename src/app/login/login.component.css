@@ -1,0 +1,34 @@
+.body{
+    text-align: center;
+    width: 500px;
+    left: 50%;
+    transform: translate(150%,50%);
+}
+
+.center{
+    
+    transform: translate(0%,20%);
+}
+
+.center form{
+    transform: translate(0%,20%);
+}
+
+.center img{
+    transform: translate(10%,0%);
+}
+
+.buttonCenter{
+    left: 50%;
+    transform: translate(0%,100%);
+}
+
+.googleCenter{
+    left: 50%;
+    transform: translate(0%,80%);
+}
+
+.registerCenter{
+    left: 50%;
+    transform: translate(0%,60%);
+}
