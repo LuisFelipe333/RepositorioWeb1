@@ -1,44 +1,18 @@
+<div class="main-div">
+    <mat-card>
+        <form class="login-form" [formGroup]="loginFormGroup">
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
 
-<div class="body">
-    <img src="../../assets/Img/SquareEnixLogo.png" alt="">
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" formControlName="password" >
+            </mat-form-field>
 
-    <!-- <form action="/landing-page"> -->
-        
-        <!-- <div class="form-group"> -->
-        <div class="center">
-            <div>
-                <label for="exampleInputEmail1">Username</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                </div>
-                <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" required>
-                </div>
-                <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-        </div>
-        
-        
-        <div class="buttonCenter">
-            <!-- <button type="submit" class="btn btn-primary">Login</button> -->
-            <button type="button" (click)="login()" class="btn btn-primary">Login</button>
-        </div >
-    
-    <!-- </form> -->
-
-    <div class="googleCenter">
-        <div>
-            <button type="button" (click)="signInGoogle()" class="btn btn-danger">Sign in with Google</button>
-        </div>
-        
-        <div class="registerCenter">
-            <button type="button"  (click)="signIn()" class="btn btn-info">Register</button>
-        </div>
-    </div>
-    
+            <button class="example-full-width"  [disabled]="loginFormGroup.invalid" mat-raised-button color="primary"  (click)="login()">Aceptar</button>
+        </form>
+    </mat-card>
 
 </div>
-

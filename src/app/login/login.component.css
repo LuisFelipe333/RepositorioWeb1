@@ -1,4 +1,4 @@
-.body{
+/* .body{
     text-align: center;
     width: 500px;
     left: 50%;
@@ -31,4 +31,25 @@
 .registerCenter{
     left: 50%;
     transform: translate(0%,60%);
+} */
+
+mat-slider {
+    width: 300px;
+  }
+
+  .main-div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
 }
