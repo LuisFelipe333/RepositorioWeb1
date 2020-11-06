@@ -65,26 +65,31 @@ export class DashboardComponent implements OnInit {
   post(): void{
     const data = this.postFormGroup.value;
 
-   this.authService.postUser(data.name,data.lastName,data.age,data.address);
+    this.authService.postUser(data.name,data.lastName,data.age,data.address).subscribe((data:any[])=>{
+      
     this.loadTable();
+    });
+    
 
   }
 
-  put(): void{
-    
-    
+  put(): void{    
     const data = this.putFormGroup.value;
+    this.authService.putUser(data.id,data.name,data.lastName,data.age,data.address).subscribe((data:any[])=>{
+      
+      this.loadTable();
+    });
     
-    this.authService.putUser(data.id,data.name,data.lastName,data.age,data.address);
-    this.loadTable();
 
   }
 
   delete(): void{
     const data = this.deleteFormGroup.value;
     
-    this.authService.deleteUser(data.id);
-    this.loadTable();
+    this.authService.deleteUser(data.id).subscribe((data:any[])=>{
+      this.loadTable();
+    });
+    
   }
 
 

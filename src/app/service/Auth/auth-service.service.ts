@@ -59,11 +59,7 @@ export class AuthServiceService {
       })
     }
 
-    this.http.post(`${this.api}api/v1/profile/userData_url/`,{name,lastName,age,address},httpOptions).subscribe((response:[])=>{
-      if(response !=null){
-        this.getListUser();
-      }
-    })
+    return this.http.post(`${this.api}api/v1/profile/userData_url/`,{name,lastName,age,address},httpOptions);
   }
 
   putUser(id:Number,name : String, lastName : String, age : Number, address : String){
@@ -78,11 +74,7 @@ export class AuthServiceService {
       })
     }
 
-    this.http.put(`${this.api}api/v1/profile/userData_put/${id}`,{name,lastName,age,address},httpOptions).subscribe((response:[])=>{
-      if(response !=null){
-        this.getListUser();
-      }
-    })
+    return this.http.put(`${this.api}api/v1/profile/userData_put/${id}`,{name,lastName,age,address},httpOptions);
   }
 
   deleteUser(id:Number){
@@ -94,11 +86,7 @@ export class AuthServiceService {
       })
     }
 
-    this.http.delete(`${this.api}api/v1/profile/userData_delete/${id}`,httpOptions).subscribe((response:[])=>{
-      if(response !=null){
-        this.getListUser(); 
-      }
-    })
+    return this.http.delete(`${this.api}api/v1/profile/userData_delete/${id}`,httpOptions);
   }
 
 }
