@@ -1,40 +1,35 @@
-<app-header></app-header>
+<app-top></app-top>
+<br>
+<br>
 
-<div class="body">
-    <img class="form-group" src="../../assets/Img/SquareEnixLogo.png" alt="">
+<div class="main-div">
+    <mat-card>
+        <form class="login-form" [formGroup]="registerFormGroup">
 
-    <!-- <form action="/landing-page"> -->
+            <mat-form-field class="example-full-width">
+                <mat-label>username</mat-label>
+                <input matInput placeholder="Username" formControlName="username">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Password1" formControlName="password1" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type="password" placeholder="Password2" formControlName="password2" >
+            </mat-form-field>
         
-        <!-- <div class="form-group"> -->
-        <div class="form-group">
-            <label for="exampleInputEmail1">Username</label>
-            <input class="form-control" required>
-            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Full Name</label>
-            <input  class="form-control"   required>
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" required>
-        </div>
-        
-        
-        <div >
-            <!-- <button type="submit" class="btn btn-primary">Login</button> -->
-            <button type="button"  (click)="toLanding()" class="btn btn-primary">Login</button>
-        </div >
-    
-    <!-- </form> -->
+            <button class="example-full-width"  [disabled]="registerFormGroup.invalid" mat-raised-button color="primary"  (click)="register()">Aceptar</button>
+        </form>
+    </mat-card>
 
     
 
 </div>
-

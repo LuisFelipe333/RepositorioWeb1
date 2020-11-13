@@ -33,6 +33,15 @@ export class AuthServiceService {
     return this.http.post(`${this.api}api/v1/login/`, {username, password}, httpOptions);
   }
 
+  register(username : string, email:string, password1: string, password2: string) : Observable<any> {
+    const httpOptions =  {
+      headers : new HttpHeaders ({
+        'Content-Type' : 'application/json',
+      })
+    };
+    return this.http.post(`${this.api}rest-auth/registration/`, {username, email, password1, password2}, httpOptions);
+  }
+
   getListUser() : Observable<any>{
     let user = JSON.parse(localStorage.getItem('user'));
     console.log(user['token']);
