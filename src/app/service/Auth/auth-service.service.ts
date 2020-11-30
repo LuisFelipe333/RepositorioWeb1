@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 export class AuthServiceService {
   //api: String = 'http://localhost:8000/';
-  api: String = 'https://backweb-ids.herokuapp.com/';
+  api: String = 'http://3.85.166.246/';
 
   constructor( private http: HttpClient ) { }
 
