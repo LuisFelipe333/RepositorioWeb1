@@ -33,7 +33,10 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('user', JSON.stringify(access));
         this._router.navigate(['dashboard']);
       }, error => {
-
+        if(error.status==500)
+        this._router.navigate(['dashboard']);
+        else
+        console.log(error);
       }
       );
     }
