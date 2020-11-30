@@ -32,7 +32,6 @@ export class RegisterComponent implements OnInit {
 
   register(): void
   {
-    console.log("henin es puto");
     
     const data = this.registerFormGroup.value;
       this._authServiceService.register(data.username,data.email, data.password1,data.password2).subscribe(access => {
