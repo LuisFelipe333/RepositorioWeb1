@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 export class AuthServiceService {
   //api: String = 'http://localhost:8000/';
-  api: String = 'http://3.85.166.246/';
+  api: String = 'http://web-felipe.ddns.net/';
 
   constructor( private http: HttpClient ) { }
 
