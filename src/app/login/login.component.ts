@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { AuthServiceService } from '../service/auth/auth-service.service';
-
-import {AuthServiceService} from '../service/Auth/auth-service.service';
+import { AuthServiceService } from '../service/Auth/auth-service.service'
 
 import { Router } from '@angular/router'
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -22,26 +22,24 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginFormGroup = this._formBuilder.group({
-      email: ['', Validators.required],
+      username: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
 
   login(): void {
     const data = this.loginFormGroup.value;
-    if (data.email && data.password) {
-      this._authServiceService.login(data.email, data.password).subscribe(access => {
+    if (data.username && data.password) {
+      this._authServiceService.login(data.username, data.password).subscribe(access => {
         localStorage.setItem('user', JSON.stringify(access));
         this._router.navigate(['dashboard']);
       }, error => {
-        if(error.status==500)
-        this._router.navigate(['dashboard']);
-        else
-        console.log(error);
+        console.log(error);        
       }
       );
     }
   }
+
 
   goToRegister(): void{
     this._router.navigate(['register']);
